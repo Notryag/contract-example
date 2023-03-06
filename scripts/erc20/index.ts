@@ -1,9 +1,11 @@
 import { ethers } from "hardhat"
-import { deployContract } from "./utils"
+import { deployContract } from "../utils"
 
 const main = async () => {
 
-    await deployContract('MyToken')
+    await deployContract('Token0')
+    await deployContract('Token1')
+    
     
 }
 
