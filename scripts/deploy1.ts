@@ -1,14 +1,13 @@
 import { ethers } from "hardhat"
+import { deployContract } from "./utils"
 
 const main = async () => {
-    const MyToken = await ethers.getContractFactory("MyToken")
-    const mytoken = await MyToken.deploy()
-    await mytoken.deployed()
 
-    console.log("MyToken deployed to:", mytoken.address)
+    await deployContract('MyToken')
+    
 }
 
-main().then(() => process.exit(0)).catch(error => {
+main().then().catch(error => {
     console.error(error)
     process.exit(1)
 })
