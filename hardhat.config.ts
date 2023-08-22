@@ -6,10 +6,8 @@ function mnemonic() {
     return process.env.PRIVATE_KEY
 }
 
-console.log(mnemonic(), "mom")
-
 const config: HardhatUserConfig = {
-    solidity: "0.8.17",
+    solidity: "0.8.19",
     networks: {
         ganache: {
             url: "http://localhost:9545",
