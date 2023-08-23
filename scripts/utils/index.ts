@@ -23,7 +23,7 @@ export async function createContractInfo(contractName: string, contract: any) {
         info: {
             name: contractName,
             network: network.name,
-            address: contract.address,
+            address: contract.target,
         },
         abi: artifact.abi,
         bytecode: artifact.bytecode,
