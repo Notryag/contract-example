@@ -6,9 +6,9 @@ interface ContractParams {
     [key: string]: any
 }
 
-export async function deployContract(contractName: string, rest: ContractParams = {}) {
+export async function deployContract(contractName: string, rest: ContractParams = []) {
     // 获取合约工厂
-    const contract = await ethers.deployContract(contractName)
+    const contract = await ethers.deployContract(contractName, rest)
 
     // 等待合约部署完成
     await contract.waitForDeployment()

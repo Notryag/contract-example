@@ -12,7 +12,7 @@ const config: HardhatUserConfig = {
         ganache: {
             url: "http://localhost:9545",
             chainId: 1337, // Ganache 默认的 chainId
-            accounts: ["0x7868a81e43626bbb5b0f0607a02a94d0255ca94a51504b488c61de7f93bf4396", "0x1eedfa89453f3f3ac8f2346ecfcac92e6f575b194fd68a60465b03dc5464ac48"],
+            accounts: ["080e2903da62b2f2f3db2e84e85aee5b59b70d30d65f593a8b29c5533580d3dc"],
         },
         goerli: {
             url: "https://eth-goerli.g.alchemy.com/v2/" + process.env.INFURA_ID,

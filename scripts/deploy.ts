@@ -4,7 +4,8 @@ import { deployContract } from "./utils"
 const main = async () => {
 
     // await deployContract('CoffeeSeller')
-    await deployContract('MyToken')
+    const myToken = await deployContract('MyToken')
+    await deployContract('Faucet', [myToken.target, 1])
     
 }
 
