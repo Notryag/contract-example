@@ -14,10 +14,10 @@ const config: HardhatUserConfig = {
             chainId: 1337, // Ganache 默认的 chainId
             accounts: ["080e2903da62b2f2f3db2e84e85aee5b59b70d30d65f593a8b29c5533580d3dc"],
         },
-        goerli: {
-            url: "https://eth-goerli.g.alchemy.com/v2/" + process.env.INFURA_ID,
-            accounts: { mnemonic: mnemonic() },
-        },
+        // goerli: {
+        //     url: "https://eth-goerli.g.alchemy.com/v2/" + process.env.INFURA_ID,
+        //     accounts: { mnemonic: mnemonic() },
+        // },
     },
 }
 

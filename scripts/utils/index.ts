@@ -6,6 +6,7 @@ interface ContractParams {
     [key: string]: any
 }
 
+// 部署合约
 export async function deployContract(contractName: string, rest: ContractParams = []) {
     // 获取合约工厂
     const contract = await ethers.deployContract(contractName, rest)
@@ -17,6 +18,7 @@ export async function deployContract(contractName: string, rest: ContractParams 
     return contract
 }
 
+//  创建合约信息文件
 export async function createContractInfo(contractName: string, contract: any) {
     const artifact = artifacts.readArtifactSync(contractName)
     const contractFile = {
@@ -38,7 +40,7 @@ export async function createContractInfo(contractName: string, contract: any) {
     writeFile(contractInfoFile, JSON.stringify(contractFile, null, 2), "utf8")
 }
 
-
+// 创建目录
 function createDirectoryIfNotExists(directory:string) {
     if (!existsSync(directory)) {
       mkdirSync(directory, { recursive: true });
